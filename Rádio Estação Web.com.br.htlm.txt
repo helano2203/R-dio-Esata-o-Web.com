@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Rádio Estação Web</title>
+  <style>
+    * {
+      margin: 0; padding: 0;
+      box-sizing: border-box;
+    }
+    body {
+      font-family: 'Segoe UI', sans-serif;
+      background: linear-gradient(to bottom, #002244, #004488);
+      color: #fff;
+      line-height: 1.6;
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+    }
+    header {
+      background-color: rgba(0,0,0,0.6);
+      text-align: center;
+      padding: 40px 20px;
+    }
+    header h1 {
+      font-size: 3em;
+      margin-bottom: 10px;
+    }
+    header p {
+      font-size: 1.2em;
+      color: #ddd;
+    }
+    nav {
+      background-color: #001f3f;
+      text-align: center;
+      padding: 10px 0;
+    }
+    nav a {
+      color: #fff;
+      margin: 0 15px;
+      text-decoration: none;
+      font-weight: bold;
+      font-size: 1.1em;
+    }
+    nav a:hover {
+      color: #ffcc00;
+    }
+    .container {
+      max-width: 1000px;
+      margin: auto;
+      padding: 20px;
+      flex-grow: 1;
+    }
+    .card {
+      background-color: rgba(255, 255, 255, 0.1);
+      padding: 20px;
+      border-radius: 12px;
+      margin-bottom: 20px;
+      box-shadow: 0 0 15px rgba(0,0,0,0.2);
+    }
+    h2 {
+      color: #ffcc00;
+      margin-bottom: 10px;
+    }
+    .player {
+      text-align: center;
+      margin: 20px 0;
+    }
+    .player a {
+      display: inline-block;
+      padding: 15px 25px;
+      font-size: 18px;
+      color: #002244;
+      background-color: #ffcc00;
+      text-decoration: none;
+      border-radius: 8px;
+      font-weight: bold;
+      transition: 0.3s;
+    }
+    .player a:hover {
+      background-color: #ffaa00;
+    }
+    footer {
+      text-align: center;
+      background-color: rgba(0,0,0,0.6);
+      padding: 15px;
+      font-size: 0.9em;
+      color: #aaa;
+      margin-top: auto;
+    }
+    .card ul {
+      list-style: none;
+      padding-left: 0;
+    }
+    .card li {
+      margin-bottom: 5px;
+    }
+    form input, form textarea {
+      width: 100%;
+      padding: 10px;
+      margin: 8px 0 15px 0;
+      border-radius: 8px;
+      border: none;
+      font-size: 1em;
+    }
+    form button {
+      background-color: #ffcc00;
+      color: #002244;
+      padding: 12px 25px;
+      font-size: 1.2em;
+      border: none;
+      border-radius: 8px;
+      font-weight: bold;
+      cursor: pointer;
+      transition: 0.3s;
+    }
+    form button:hover {
+      background-color: #ffaa00;
+    }
+    .obs {
+      background-color: rgba(255, 204, 0, 0.2);
+      padding: 12px 15px;
+      border-radius: 8px;
+      color: #002244;
+      font-weight: bold;
+      margin-top: 15px;
+      font-size: 1.1em;
+    }
+    .success-message {
+      background-color: rgba(0, 200, 0, 0.2);
+      padding: 15px;
+      border-radius: 10px;
+      color: #004400;
+      font-weight: bold;
+      margin-top: 10px;
+      display: none;
+    }
+    @media(max-width: 600px) {
+      header h1 {
+        font-size: 2em;
+      }
+      nav a {
+        display: block;
+        margin: 10px 0;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <h1>📻 Rádio Estação Web</h1>
+    <p>Levando o melhor do sertão até você - De Frei Paulo para o mundo</p>
+  </header>
+
+  <nav>
+    <a href="#ao-vivo">Ouça Ao Vivo</a>
+    <a href="#programacao">Programação</a>
+    <a href="#colaboradores">Equipe</a>
+    <a href="#contato">Contato</a>
+    <a href="#anuncie">Anuncie</a>
+  </nav>
+
+  <div class="container">
+    <section id="ao-vivo" class="card player">
+      <h2>🔊 Ouça Ao Vivo</h2>
+      <a href="http://zeno.fm/radio/radio-estacao-Frei-Paulo/" target="_blank" rel="noopener noreferrer">▶️ Clique aqui para ouvir</a>
+    </section>
+
+    <section id="programacao" class="card">
+      <h2>🗓️ Programação</h2>
+      <ul>
+        <li><strong>Segunda, Quarta e Sexta</strong></li>
+        <li>08h às 10h – <strong>"Bom Dia Sertão"</strong> com Helano Oliveira</li>
+      </ul>
+    </section>
+
+    <section id="colaboradores" class="card">
+      <h2>👥 Equipe</h2>
+      <ul>
+        <li><strong>Helano Oliveira</strong><br><em>Locutor, jornalista, radialista e fundador</em></li>
+        <li><strong>Ryan Iniesta</strong><br><em>Diretor geral</em></li>
+      </ul>
+    </section>
+
+    <section class="card">
+      <h2>🎤 Quer ser locutor?</h2>
+      <p><strong>Entre em contato pelo WhatsApp:</strong> <a href="https://wa.me/5579981486300" target="_blank" rel="noopener noreferrer" style="color:#ffcc00;">(79) 98148-6300</a></p>
+    </section>
+
+    <section id="contato" class="card">
+      <h2>📞 Contato</h2>
+      <p><strong>Email:</strong> radionet787@gmail.com</p>
+      <p><strong>Endereço:</strong> Rua Santa Fé Nº 155, Frei Paulo-SE</p>
+    </section>
+
+    <section id="anuncie" class="card">
+      <h2>📢 Anuncie sua propaganda na Rádio Estação Web</h2>
+      <p>Quer divulgar sua empresa, produto ou serviço para todo o sertão e região?  
+      Aproveite a promoção: os <strong>2 primeiros meses são grátis!</strong></p>
+      <p>Após esse período, a taxa será de <strong>R$ 10,00 por mês</strong>. O pagamento pode ser feito via WhatsApp, no número abaixo.</p>
+      <p><strong>WhatsApp para contato e pagamento:</strong> <a href="https://wa.me/5579981486300" target="_blank" rel="noopener noreferrer" style="color:#ffcc00;">(79) 98148-6300</a></p>
+
+      <form id="formAnuncie" action="https://formsubmit.co/radionet787@gmail.com" method="POST">
+        <input type="hidden" name="_captcha" value="false" />
+        <input type="hidden" name="_next" value="#successMessage" />
+        
+        <input type="text" name="nome" placeholder="Seu nome completo" required />
+        <input type="text" name="empresa" placeholder="Nome da empresa" required />
+        <input type="email" name="email" placeholder="Seu e-mail" required />
+        <input type="tel" name="telefone" placeholder="Seu telefone" required />
+        <textarea name="mensagem" rows="4" placeholder="Mensagem adicional (opcional)"></textarea>
+        
+        <button type="submit">Enviar Cadastro</button>
+      </form>
+
+      <div id="successMessage" class="success-message">
+        Obrigado pelo cadastro! Em breve entraremos em contato via WhatsApp para enviar seu áudio de propaganda.
+      </div>
+
+      <div class="obs">
+        * Os 2 primeiros meses de anúncio são gratuitos. Depois será cobrada uma taxa mensal de R$ 10,00 via WhatsApp.
+      </div>
+    </section>
+  </div>
+
+  <footer>
+    <p>&copy; 2025 Rádio Estação Web - Todos os direitos reservados</p>
+  </footer>
+
+  <script>
+    const form = document.getElementById('formAnuncie');
+    const successMessage = document.getElementById('successMessage');
+
+    form.addEventListener('submit', function(event) {
+      successMessage.style.display = 'block';
+      form.reset();
+    });
+  </script>
+
+</body>
+</html>
